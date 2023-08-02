@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <title>Maquetacion con CSS y Divs</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script>
+        for (let i = 0; i <= 20; i++) {
+            console.log("este numero es" + i);
+        }
+
+        function sumar() {
+            let campo1 = document.getElementById("campo1").value;
+            let campo2 = document.getElementById("campo2").value;
+
+            let resultado = parseInt(campo1) + parseInt(campo2);
+            console.log(resultado);
+            let cajatexto = document.getElementById("mostrarTablero1");
+
+            cajatexto.innerHTML = resultado;
+        }
+
+        function UnirNombres(nombres, apellidos) {
+            console.log(nombres + " " + apellidos);
+        }
+        UnirNombres("Jorge", "Leal");
+
+        // sumar(1, 6);
+        // sumar(6, 8);
+
+        function numeroParoImpar() {
+            let campo3 = document.getElementById("campo3").value;
+            let tablero2 = document.getElementById("mostrarTablero2")
+            if (parseInt(campo3) % 2 == 0) {
+                console.log("el numero es par " + campo3)
+                console.log(tablero2.innerHTML)
+                tablero2.innerHTML = campo3
+            } else {
+                console.log("el numero es impar " + campo3)
+
+                console.log(tablero2.textContent)
+                tablero2.textContent = campo3
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div id="contenedorPadre">
+        <div id="cabezera">
+            <p style="margin-top: 0; color: blue; font-size: 50px; font-weight: 700">
+                cabezara
+            </p>
+        </div>
+        <div id="menu"></div>
+        <div id="izquierda">
+            <img src="https://github.com/jorgeleal12/htmlJavascript/blob/main/pokemon.jpg?raw=true" height="220px" width="250" />
+        </div>
+        <div id="derecha">
+            <table>
+                <thead>
+                    <th>cedula</th>
+                    <th>nombres</th>
+                    <th>apellidos</th>
+                    <th>correo</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12234</td>
+                        <td>jorge</td>
+                        <td>leal</td>
+                        <td>jota@hotmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>666</td>
+                        <td>jose</td>
+                        <td>leal</td>
+                        <td>jota2@hotmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                Haz <a href="https://www.google.com/" target="_blank">click aqui</a>
+            </p>
+            <input type="text" id="campo1" name="campo1" />
+            <input type="text" id="campo2" name="campo2" />
+
+            <button class="boton" onclick="sumar()">Click Sumar</button>
+
+            <div class="tablero1">
+                <span id="mostrarTablero1"></span>
+            </div>
+            <input type="text" id="campo3" name="campo3" class="input" />
+
+
+
+            <button class="boton" onclick="numeroParoImpar()">
+                Click Par o Impar
+            </button>
+
+
+            <div class="tablero1">
+                <span id="mostrarTablero2">2222</span>
+            </div>
+            <!-- <iframe
+             width="560"
+          height="315"
+          src="https://www.youtube.com/embed/VnjdikpgR0E"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <video src="http://v2v.cc/~j/theora_testsuite/320x240.ogg"></video> -->
+        </div>
+        <div id="pie"></div>
+    </div>
+</body>
+
+</html>
